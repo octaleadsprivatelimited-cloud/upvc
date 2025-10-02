@@ -29,6 +29,14 @@ const nextConfig = {
         tls: false,
       };
     }
+    
+    // Exclude the client folder from Next.js compilation
+    config.module.rules.push({
+      test: /\.(tsx?|jsx?)$/,
+      include: /client/,
+      loader: 'ignore-loader'
+    });
+    
     return config;
   },
   async headers() {

@@ -9,6 +9,9 @@ yarn-error.log*
 out/
 build/
 
+# Exclude client folder from Next.js builds
+client/
+
 # Environment variables
 .env
 .env.local
